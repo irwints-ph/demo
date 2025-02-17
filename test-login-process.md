@@ -62,10 +62,10 @@ sequenceDiagram
     else
         FE->>User: Display Error
         create participant R as Registration Process
-        FE--)R: Perform Regitration Process
+        FE--)R: Perform Registration Process
     end
 ```
-## Regitration Process
+## Registration Process
 ```mermaid
 sequenceDiagram
   autonumber

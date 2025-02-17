@@ -21,9 +21,7 @@ sequenceDiagram
             note over User, OneLogin: Until Correct Credential is given
             OneLogin-->>FE: Pass Token to Callback Page
             create participant UR as Get User Info
-            FE-)UR: Perform Get User Info
-            destroy UR
-            UR-->>User: Display data content
+            FE--)UR: Perform Get User Info
         else Credentials Incorrect
             
             OneLogin-->>-User: Show Error Message
@@ -32,9 +30,7 @@ sequenceDiagram
             note over User, OneLogin: Or until user exit page         
         end
     else User Logged In
-            FE-)UR: Perform Get User Info
-            destroy UR
-            UR-->>User: Display data content
+            FE--)UR: Perform Get User Info
     end
 
 ```
@@ -65,7 +61,7 @@ sequenceDiagram
     else
         FE->>User: Display Error
         create participant R as Registration Process
-        User->>R: Perform Regitration Process
+        FE--)R: Perform Regitration Process
     end
 ```
 ## Regitration Process

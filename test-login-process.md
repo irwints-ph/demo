@@ -22,7 +22,6 @@ sequenceDiagram
             OneLogin-->>FE: Pass Token to Callback Page
             create participant UR as Get User Info
             FE--)UR: Perform Get User Info
-            destroy UR
             UR-->>User: Display data content
         else Credentials Incorrect
             

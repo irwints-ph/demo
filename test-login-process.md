@@ -22,6 +22,8 @@ sequenceDiagram
             OneLogin-->>FE: Pass Token to Callback Page
             create participant UR as Get User Info
             FE--)UR: Perform Get User Info
+            destroy UR
+            UR-->>User: Display data content
         else Credentials Incorrect
             
             OneLogin-->>-User: Show Error Message
@@ -44,9 +46,9 @@ sequenceDiagram
     participant API
     
     
-
+    note over FE,API: Calls api/common/getuserinfo
     FE->>API: Get User Info
-    FE->>API: Calls api/common/getuserinfo
+
     alt User not in DB
         API-->>FE: data is OneLogin token content
     else User in DB

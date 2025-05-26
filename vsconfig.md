@@ -39,6 +39,21 @@ ms-python.vscode-pylance
 ```json
 
 ```
+```
+HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DefaultColor
+HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\DefaultColor
+color 0a
+@reg add "hkcu\software\microsoft\command processor" /v defaultcolor /t reg_dword /d 0xa /f
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont\
+Name: 00
+Data: Consolas
 
+reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont"
+reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor" /v DefaultColor
+
+reg query "HKEY_CURRENT_USER\Software\Microsoft\Command Processorr" /v DefaultColor
+reg query HKLM\Software\Microsoft\ResKit /v Version
+
+```
 
 

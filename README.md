@@ -16,20 +16,25 @@
 1. Add C:\sw\PortableGit and C:\sw\PortableGit\bin to [path](#adding-to-path)
 1. configure git in VS Code
 
-file->prefernce->setting or ctrl + ,
+### Configure git in VSCode
+`file->prefernce->setting or ctrl + ,`
+
 1. keyin git.path
-1. Click Edit in settings.json
-![git.path][3]
-1. "git.path": "C:\\sw\\PortableGit\\bin\\git.exe"
-![settings.json][4]
-1. save and re-open git
-1. User manager for login on 1st use
+2. Click Edit in settings.json  
+![git.path][3] ![settings.json][4]
 
-### Adding to path - Forom CMD Type
+`"git.path": "C:\\sw\\PortableGit\\bin\\git.exe"`
 
+3. save and re-open git
+> User manager for login on 1st use
+
+
+### Adding to path
+> Using CMD, keyin
 ```bash
 rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
+> Add these entries
 ```
 C:\sw\PortableGit
 C:\sw\PortableGit\bin

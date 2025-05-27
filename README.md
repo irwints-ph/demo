@@ -18,8 +18,9 @@
 2. Click Edit in settings.json  
   ![git.path][3] 
   ![settings.json][4]
+
   `"git.path": "C:\\sw\\PortableGit\\bin\\git.exe"`
-3. save and re-open git
+4. save and re-open git
 > User manager for login on 1st use
 
 ## VSCode configuration for all projects
@@ -54,6 +55,13 @@ code --list-extensions
 ```bash
 setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
 ```
+
+## DOTNET
+```bash
+setx DOTNETBIN C:\sw\dotnet-sdk-8.0.410-win-x64
+setx PATH "%PATH%;%DOTNETBIN%;"
+```
+
 ## Color and Prompt
 ```
 reg add "HKCU\Software\Microsoft\Command Processor" /v DefaultColor /t REG_DWORD /d 0x0a /f

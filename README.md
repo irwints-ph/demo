@@ -1,3 +1,5 @@
+# Non Admin Installs
+
 ### Installing VSCode
 1. Download [VSCode][1] windows .zip version 
   ![](img\vscode-zip.png)
@@ -67,7 +69,6 @@ setx DOTNETBIN C:\sw\dotnet\sdk-8.0.410-win-x64
 rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
 `add %DOTNETBIN% to path`
-
 
 ## Color and Prompt
 ```

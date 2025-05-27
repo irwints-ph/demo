@@ -40,6 +40,11 @@ C:\sw\PortableGit
 C:\sw\PortableGit\bin
 C:\sw\code\bin
 ```
+`Alternative`
+setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
+
+>Restart CMD
+
 [1]:https://code.visualstudio.com/download
 [2]:https://git-scm.com/downloads/win
 [3]:img/vsc-git-path.png

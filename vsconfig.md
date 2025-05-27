@@ -94,7 +94,22 @@ pyenv version
 ```
 ### CMD Color
 ```
+reg add "HKCU\Software\Microsoft\Command Processor" /v DefaultColor /t REG_DWORD /d 0x0a /f
+setx PROMPT $+$M$_$P$_$$$S
+setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
+```
+> `Restart CMD`
+
+`Others`
+```
 color 0a
+
+reg add "HKCU\Control Panel\Desktop" /v LogPixels /t REG_DWORD /d 96 /f
+mode con: cols=130 lines=32766
+
+reg query "hkcu\console" /S | more
+
+
 @reg add "HKEY_CURRENT_USER\Software\Microsoft\Command Processorr" /v defaultcolor /t reg_dword /d 0xa /f
 
 HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DefaultColor

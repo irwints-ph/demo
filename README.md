@@ -6,7 +6,7 @@
 1. Download [VSCode][1] windows .zip version 
 ![](img\vscode-zip.png)
 1. Extract to c:\sw\code
-1. Add c:\sw\code to [path](#adding-to-path)
+1. Add c:\sw\code\bin to [path](#adding-to-path)
 
 ### Installing Git
 
@@ -38,7 +38,7 @@ rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
 C:\sw\PortableGit
 C:\sw\PortableGit\bin
-C:\sw\code
+C:\sw\code\bin
 ```
 [1]:https://code.visualstudio.com/download
 [2]:https://git-scm.com/downloads/win

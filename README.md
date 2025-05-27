@@ -13,14 +13,14 @@
 
 ### Configure git in VSCode
 `file->prefernce->setting or ctrl + ,`
-> or copy the VSCode configuration below
+> or copy the [VSCode configuration](#vscode-configuration-for-all-projects) below
 1. keyin git.path
 2. Click Edit in settings.json  
   ![git.path][3] 
   ![settings.json][4]
 
   `"git.path": "C:\\sw\\PortableGit\\bin\\git.exe"`
-4. save and re-open git
+3. save and re-open git
 > User manager for login on 1st use
 
 ## VSCode configuration for all projects
@@ -50,6 +50,11 @@ code --install-extension ms-python.debugpy
 code --install-extension ritwickdey.liveserver
 code --list-extensions
 ```
+## Dotnet install
+- Download the .NET SDK or Runtime binaries from the [Microsoft website][dn]. 
+  - [Windows Version SDK 8][dn8w]
+- Unzip the contents of the downloaded archive and move to C:\sw\dotnet
+- [Setup dotnet environment Variables](#dotnet)
 
 # Setup environment Variables
 ```bash
@@ -58,9 +63,11 @@ setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
 
 ## DOTNET
 ```bash
-setx DOTNETBIN C:\sw\dotnet-sdk-8.0.410-win-x64
-setx PATH "%PATH%;%DOTNETBIN%;"
+setx DOTNETBIN C:\sw\dotnet\sdk-8.0.410-win-x64
+rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
+`add %DOTNETBIN% to path`
+
 
 ## Color and Prompt
 ```
@@ -84,6 +91,7 @@ function prompt {
   return " "
 }
 ```
+
 ### Install NVM
 ```bash
 start chrome https://github.com/coreybutler/nvm-windows/
@@ -98,3 +106,5 @@ npm install -g @angular/cli@7.3.5
 [2]:https://git-scm.com/downloads/win
 [3]:img/vsc-git-path.png
 [4]:img/vsc-git-path-save.png
+[dn]:https://dotnet.microsoft.com/en-us/download/dotnet
+[dn8w]:https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.410-windows-x64-binaries

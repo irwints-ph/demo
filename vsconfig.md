@@ -1,4 +1,5 @@
 ### VSCode Global Settings
+`%userprofile%\AppData\Roaming\Code\User\settings.json`
 ```json
 {
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
@@ -18,6 +19,7 @@
 PROMPT=$+$M$_$P$_$$$S
 code --list-extensions
 ```
+`%userprofile%\.vscode\extensions`
 
 ### VSCode basic extensions
 ```bash

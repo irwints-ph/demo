@@ -24,5 +24,6 @@ Open a Command Prompt or PowerShell window.
 [1w]:https://dot.net/v1/dotnet-install.ps1
 [1l]:https://dot.net/v1/dotnet-install.sh
 
-[2]:https://learn.microsoft.com/en-us/dotnet/core/install/windows
+[2x]:https://learn.microsoft.com/en-us/dotnet/core/install/windows
+[2]:https://dotnet.microsoft.com/en-us/download/dotnet
 [2w]:https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.410-windows-x64-binaries

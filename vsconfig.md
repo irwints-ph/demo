@@ -40,7 +40,7 @@ ms-python.vscode-pylance
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1MkBtYWlsLmNvbSIsImV4cCI6MTc0ODMzOTAyM30.pVWY-0TZxxl25RjqlQVmhF6GTP2RniGMboeTUVpfcx0"
     }
   },
-  "python.defaultInterpreterPath":"C:/Users/ErTSantos/.venv/flask/Scripts/python.exe"
+  "python.defaultInterpreterPath":"~/.venv/flask/Scripts/python.exe"
 }
 ```
 `.vscode/launch.json`

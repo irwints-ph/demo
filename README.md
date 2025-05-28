@@ -1,4 +1,10 @@
 # Non Admin Installs
+1. [VSCode](#installing-vscode)
+2. [Git](#installing-git)
+3. [dotnet](#install-dotnet)
+4. [Python](#install-python)
+    - [pyenv-win](#install-pyenv-win)
+5. [PostgreSQL](#install-postgresql)
 
 ### Installing VSCode
 1. Download [VSCode][1] windows .zip version 
@@ -49,13 +55,13 @@
 setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
 ```
 
-## Dotnet install
+## Install Dotnet
 - Download the .NET SDK or Runtime binaries from the [Microsoft website][dn]. 
   - [Windows Version SDK 8][dn8w]
 - Unzip the contents of the downloaded archive and move to C:\sw\dotnet
 - [Setup dotnet environment Variables](#dotnet)
 
-### DOTNET environment Variables
+### Dotnet environment Variables
 ```bash
 setx DOTNETBIN C:\sw\dotnet\sdk-8.0.410-win-x64
 rundll32 sysdm.cpl,EditEnvironmentVariables
@@ -68,6 +74,7 @@ dotnet tool install --global dotnet-ef --version 9.0.5
 
 SETX DOTNET_ROOT %DOTNETBIN%
 ```
+> Rename DOTNETBIN DOTNET_ROOT
 
 ## Python
 `Disable from Microsoft Store App Installer python and pyhton3`

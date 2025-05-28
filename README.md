@@ -44,6 +44,98 @@
 }
 ```
 
+# Setup environment Variables
+```bash
+setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
+```
+
+## Dotnet install
+- Download the .NET SDK or Runtime binaries from the [Microsoft website][dn]. 
+  - [Windows Version SDK 8][dn8w]
+- Unzip the contents of the downloaded archive and move to C:\sw\dotnet
+- [Setup dotnet environment Variables](#dotnet)
+
+### DOTNET environment Variables
+```bash
+setx DOTNETBIN C:\sw\dotnet\sdk-8.0.410-win-x64
+rundll32 sysdm.cpl,EditEnvironmentVariables
+```
+`add %DOTNETBIN% to path`
+
+
+## Python
+`Disable from Microsoft Store App Installer python and pyhton3`
+  - Settings > Apps > Advanced app settings > App execution aliases
+
+### Install [pyenv-win](https://github.com/pyenv-win/pyenv-win)
+
+```powershell
+# allow to run powershell script for user
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+#download and install pyenv
+Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+```
+
+### Install Python
+```bash
+pyenv install 3.13.3
+pyenv global 3.13.3
+pyenv version
+```
+
+### Install Virtual Environment
+```bash
+python -m venv %userprofile%/.venv/fastapi
+```
+
+### Activate the virtual environment
+```bash
+%userprofile%/.venv/fastapi/Scripts/activate
+python.exe -m pip install --upgrade pip
+```
+
+```bash
+python -m pip install fastapi uvicorn
+```
+
+`.vscode\settings.json`
+```json
+{
+  "python.defaultInterpreterPath":"~/.venv/fastapi/Scripts/python.exe"
+}
+```
+`.vscode\launch.json`
+```json
+{
+  "configurations": [
+    {
+      "name": "Run Main",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "main.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "FastAPI App",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "cwd": "${workspaceFolder}/",
+      // args per command separated by space indicated by comma      
+      "args": [
+        "main:app",
+        "--reload"
+      ]
+    }    
+  ]
+}
+```
+
+## Posgres
+
+
+
 ## Install VSCode extensions
 ```bash
 code --install-extension humao.rest-client
@@ -52,23 +144,6 @@ code --install-extension ms-python.debugpy
 code --install-extension ritwickdey.liveserver
 code --list-extensions
 ```
-## Dotnet install
-- Download the .NET SDK or Runtime binaries from the [Microsoft website][dn]. 
-  - [Windows Version SDK 8][dn8w]
-- Unzip the contents of the downloaded archive and move to C:\sw\dotnet
-- [Setup dotnet environment Variables](#dotnet)
-
-# Setup environment Variables
-```bash
-setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
-```
-
-## DOTNET
-```bash
-setx DOTNETBIN C:\sw\dotnet\sdk-8.0.410-win-x64
-rundll32 sysdm.cpl,EditEnvironmentVariables
-```
-`add %DOTNETBIN% to path`
 
 ## Color and Prompt
 ```
@@ -101,6 +176,11 @@ nvm install 10.15.3
 sudo nvm use 10.15.3
 npm install -g json-server@0.16.3
 npm install -g @angular/cli@7.3.5
+```
+
+```explorer
+%userprofile%\.vscode\extensions
+%userprofile%\AppData\Roaming\Code\User\settings.json
 ```
 
 [1]:https://code.visualstudio.com/download

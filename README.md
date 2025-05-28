@@ -5,6 +5,8 @@
 4. [Python](#install-python)
     - [pyenv-win](#install-pyenv-win)
 5. [PostgreSQL](#install-postgresql)
+1. [Warning](#warning)
+1. [Others](#others)
 
 ### Installing VSCode
 1. Download [VSCode][1] windows .zip version 
@@ -198,6 +200,9 @@ reg add "HKCU\Software\Microsoft\Command Processor" /v DefaultColor /t REG_DWORD
 SETX PROMPT $+$M$_$P$_$$$S
 ```
 
+## Warning
+**Using SETX with varaible will set the current value not future values**
+**Recommended to use rundll32 sysdm.cpl,EditEnvironmentVariables instead**
 
 ## Others
 

@@ -201,8 +201,9 @@ SETX PROMPT $+$M$_$P$_$$$S
 ```
 
 ## Warning
-**Using SETX with varaible will set the current value not future values**
-**Recommended to use rundll32 sysdm.cpl,EditEnvironmentVariables instead**
+> Using SETX with varaible will set the current value not future values
+
+> Recommended to use **rundll32 sysdm.cpl,EditEnvironmentVariables** instead
 
 ## Others
 

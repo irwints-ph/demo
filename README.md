@@ -62,6 +62,10 @@ rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
 `add %DOTNETBIN% to path`
 
+### dotnet-ef
+```bash
+dotnet tool install --global dotnet-ef --version 9.0.5
+```
 
 ## Python
 `Disable from Microsoft Store App Installer python and pyhton3`
@@ -133,7 +137,11 @@ python -m pip install fastapi uvicorn
 ```
 
 ## Posgres
-
+```
+https://www.youtube.com/watch?v=cYFYfYXObgA
+https://www.enterprisedb.com/download-postgresql-binaries
+https://tutlinks.com/install-postgresql-without-admin-rights-windows/#google_vignette
+```
 
 
 ## Install VSCode extensions

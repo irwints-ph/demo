@@ -65,6 +65,8 @@ rundll32 sysdm.cpl,EditEnvironmentVariables
 ### dotnet-ef
 ```bash
 dotnet tool install --global dotnet-ef --version 9.0.5
+
+SETX DOTNET_ROOT %DOTNETBIN%
 ```
 
 ## Python
@@ -136,10 +138,39 @@ python -m pip install fastapi uvicorn
 }
 ```
 
-## Posgres
+## PostgreSQL
+
+### Install PostgreSQL
+```bash
+mkdir C:\SW\DB\PostgreSQL
+```
+
+1. [Download binaries][pgsb] and extract to to C:\SW\DB\PostgreSQL
+2. Add C:\SW\DB\PostgreSQL\pgsql\bin to PATH
+  ```bash
+  setx PATH "%PATH%;C:\SW\DB\PostgreSQL\pgsql\bin"
+  ```
+
+### Test the installation 
+```bash
+postgres -V
+psql -V
+```
+
+### Create DB
+```bash
+set DBPATH=C:\SW\DB\PostgreSQL\data\pgdata
+initdb -D %DBPATH% -U postgres -W -E UTF8 -A scram-sha-256
+```
+
+### Start the PostgreSQL database
+```bash
+pg_ctl -D "%DBPATH%" -l logfile start
+```
+
+#### From
 ```
 https://www.youtube.com/watch?v=cYFYfYXObgA
-https://www.enterprisedb.com/download-postgresql-binaries
 https://tutlinks.com/install-postgresql-without-admin-rights-windows/#google_vignette
 ```
 
@@ -197,3 +228,4 @@ npm install -g @angular/cli@7.3.5
 [4]:img/vsc-git-path-save.png
 [dn]:https://dotnet.microsoft.com/en-us/download/dotnet
 [dn8w]:https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.410-windows-x64-binaries
+[pgsb]:https://www.enterprisedb.com/download-postgresql-binaries
